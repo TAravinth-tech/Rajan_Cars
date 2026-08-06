@@ -30,7 +30,7 @@ export function SinceSeal({ className, size = 132 }: { className?: string; size?
         "grid shrink-0 place-items-center rounded-full border-4 border-gold bg-ink text-center shadow-[var(--shadow-gold)]",
         className,
       )}
-      style={{ width: size, height: size }}
+      style={{ width: size, height: size,background: "#3B2416", }}
       aria-label="Serving Trichy since 1952"
     >
       <div className="rounded-full border border-gold/60 px-3 py-2">

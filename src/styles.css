@@ -125,8 +125,8 @@
   /* Composite brand effects */
   --gradient-hero: linear-gradient(
   100deg,
-  rgba(252, 247, 235, 0.65) 0%,
-  rgba(252, 247, 235, 0.45) 35%,
+  rgba(190, 148, 51, 0.65) 0%,
+  rgba(221, 206, 170, 0.45) 35%,
   rgba(252, 247, 235, 0.20) 70%,
   rgba(255, 255, 255, 0.08) 100%
 );

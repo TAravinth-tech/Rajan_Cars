@@ -19,7 +19,9 @@ const socials = [
 
 export function Footer() {
   return (
-    <footer className="bg-ink text-ink-foreground">
+    <footer className="bg-ink text-ink-foreground" style={{
+    background: "#3B2416",
+  }}>
       <div className="mx-auto grid max-w-7xl gap-10 px-4 py-16 sm:grid-cols-2 lg:grid-cols-4">
         <div className="flex flex-col gap-4">
           <div className="flex items-center">
