@@ -125,10 +125,10 @@
   /* Composite brand effects */
   --gradient-hero: linear-gradient(
   100deg,
-  rgba(133, 111, 70, 0.55) 0%,
-  rgba(239, 222, 181, 0.35) 40%,
-  rgba(252, 246, 232, 0.12) 70%,
-  rgba(121, 7, 7, 0.08) 100%
+  rgba(252, 247, 235, 0.65) 0%,
+  rgba(252, 247, 235, 0.45) 35%,
+  rgba(252, 247, 235, 0.20) 70%,
+  rgba(255, 255, 255, 0.08) 100%
 );
   --gradient-gold: linear-gradient(135deg, var(--gold-soft), var(--gold));
   --gradient-red: linear-gradient(135deg, var(--gold), color-mix(in oklab, var(--gold) 55%, var(--ink)));

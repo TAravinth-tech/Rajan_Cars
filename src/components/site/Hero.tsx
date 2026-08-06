@@ -22,62 +22,48 @@ export function Hero() {
 
       <div className="relative mx-auto grid max-w-7xl items-center gap-10 px-4 py-20 sm:py-28 lg:grid-cols-[1.4fr_auto] lg:py-36">
         <div className="max-w-2xl">
-          <Reveal>
-            <span className="
-inline-flex
-items-center
-gap-2
-rounded-full
-border
-border-[#C89B3C]
-bg-white/75
-backdrop-blur-md
-px-4
-py-2
-font-display
-text-xs
-font-semibold
-uppercase
-tracking-[0.24em]
-text-[#8A6415]
-">
-              Trichy · Tamil Nadu
-            </span>
-          </Reveal>
-
           <Reveal delay={100}>
-            <h1 className="
-mt-6
-text-4xl
-font-extrabold
-uppercase
-leading-[1.05]
-text-white
-drop-shadow-[0_4px_16px_rgba(0,0,0,0.35)]
-sm:text-5xl
-lg:text-6xl
-">
-              Trichy's Most Trusted{" "}
-              <span
-  className="font-black"
-  style={{
-    color: "#D4A437",
-    textShadow: "0 2px 10px rgba(0,0,0,0.25)"
-  }}
->Used Car Dealer</span> Since 1952
-            </h1>
-          </Reveal>
+  <h1
+    className="
+      mt-6
+      max-w-[700px]
+      text-4xl
+      font-extrabold
+      uppercase
+      leading-[1.05]
+      text-white
+      drop-shadow-[0_4px_16px_rgba(0,0,0,0.35)]
+      sm:text-5xl
+      lg:text-6xl
+    "
+  >
+    TRICHY'S MOST TRUSTED
+    <br />
+    <span
+      className="font-black"
+      style={{
+        color: "#D4A437",
+        textShadow: "0 4px 18px rgba(0,0,0,0.45)",
+      }}
+    >
+      USED CAR DEALER
+    </span>
+    <br />
+    SINCE 1952
+  </h1>
+</Reveal>
 
           <Reveal delay={200}>
-            <p
-  className="mt-5 max-w-xl text-xl font-semibold leading-relaxed text-white"
-  style={{
-    textShadow: "0 2px 8px rgba(0,0,0,0.25)",
-  }}
->
-  Buy, Sell &amp; Exchange Quality Pre-Owned Cars with Confidence
-</p>
-          </Reveal>
+  <p
+    className="mt-5 max-w-xl text-lg font-medium leading-relaxed sm:text-xl"
+    style={{
+      color: "#5d4121",
+      textShadow: "0 2px 8px rgba(255,255,255,0.35)",
+    }}
+  >
+    Buy, Sell &amp; Exchange Quality Pre-Owned Cars with Confidence
+  </p>
+</Reveal>
 
           <Reveal delay={300}>
             <div className="mt-8 flex flex-wrap gap-3">
@@ -94,8 +80,13 @@ lg:text-6xl
             <p
   className="mt-8 font-display text-base font-extrabold uppercase tracking-[0.15em] text-[#D4A437]"
   style={{
-    textShadow: "0 2px 10px rgba(0,0,0,0.3)",
-  }}
+  textShadow: `
+    0 0 10px rgba(255,215,120,0.75),
+    0 0 22px rgba(212,164,55,0.55),
+    0 0 35px rgba(212,164,55,0.35),
+    0 3px 8px rgba(0,0,0,0.25)
+  `,
+}}
 >
   70+ Years of Trust · Transparent Deals · Easy Finance
 </p>

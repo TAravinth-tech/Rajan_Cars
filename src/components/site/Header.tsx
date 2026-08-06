@@ -47,7 +47,7 @@ export function Header() {
   return (
     <header className="sticky top-0 z-50 w-full">
       <div className={cn("overflow-hidden transition-all duration-300", scrolled ? "h-0" : "h-auto")}>
-        <TopBar />
+        <TopBar />  
       </div>
 
       <div  
