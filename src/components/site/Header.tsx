@@ -104,7 +104,7 @@ export function Header() {
             <LogoEmblem size={scrolled ? 44 : 60} className="transition-all duration-300" />
           </Link>
 
-          <nav className="hidden items-center gap-6 xl:flex">
+          <nav className="hidden items-center gap-10 xl:gap-12 xl:flex">
             {navLinks.map((link) => (
               <Link
                 key={link.href}

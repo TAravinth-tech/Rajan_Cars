@@ -27,15 +27,89 @@ export function SinceSeal({ className, size = 132 }: { className?: string; size?
   return (
     <div
       className={cn(
-        "grid shrink-0 place-items-center rounded-full border-4 border-gold bg-ink text-center shadow-[var(--shadow-gold)]",
+        "relative grid shrink-0 place-items-center rounded-full text-center",
         className,
       )}
-      style={{ width: size, height: size,background: "#3B2416", }}
+      style={{
+        width: size,
+        height: size,
+        background: "radial-gradient(circle at 35% 30%, #4a2e1c, #2b1810 75%)",
+        boxShadow:
+          "0 0 0 1px rgba(212,175,55,0.35), 0 4px 14px rgba(0,0,0,0.45), inset 0 0 12px rgba(0,0,0,0.5)",
+      }}
       aria-label="Serving Trichy since 1952"
     >
-      <div className="rounded-full border border-gold/60 px-3 py-2">
-        <span className="block font-display text-[0.6rem] tracking-[0.28em] text-gold">SINCE</span>
-        <span className="block font-display text-3xl font-bold leading-none text-gold">1952</span>
+      {/* Outer ring */}
+      <div
+        className="absolute inset-[3px] rounded-full border-[1.5px]"
+        style={{ borderColor: "rgba(212,175,55,0.55)" }}
+      />
+
+      {/* Decorative dotted ring */}
+      <svg
+        className="absolute inset-0"
+        viewBox="0 0 100 100"
+        aria-hidden="true"
+      >
+        <circle
+          cx="50"
+          cy="50"
+          r="44"
+          fill="none"
+          stroke="rgba(212,175,55,0.6)"
+          strokeWidth="0.6"
+          strokeDasharray="1.2 3.4"
+        />
+      </svg>
+
+      {/* Inner medallion */}
+      <div
+        className="relative flex flex-col items-center justify-center rounded-full border"
+        style={{
+          width: size * 0.72,
+          height: size * 0.72,
+          borderColor: "rgba(212,175,55,0.45)",
+          background:
+            "linear-gradient(180deg, rgba(212,175,55,0.06), transparent 60%)",
+        }}
+      >
+        <span
+          className="font-display text-gold"
+          style={{
+            fontSize: size * 0.075,
+            letterSpacing: "0.32em",
+            opacity: 0.9,
+          }}
+        >
+          SINCE
+        </span>
+
+        {/* small separator flourish */}
+        <div className="my-0.5 flex items-center gap-1">
+          <span className="h-px w-3 bg-gold/50" />
+          <span className="h-1 w-1 rotate-45 bg-gold/70" />
+          <span className="h-px w-3 bg-gold/50" />
+        </div>
+
+        <span
+          className="font-display font-bold leading-none text-gold"
+          style={{
+            fontSize: size * 0.24,
+            textShadow: "0 1px 2px rgba(0,0,0,0.4)",
+          }}
+        >
+          1952
+        </span>
+
+        <span
+          className="mt-1 font-display text-gold/70"
+          style={{
+            fontSize: size * 0.055,
+            letterSpacing: "0.22em",
+          }}
+        >
+          
+        </span>
       </div>
     </div>
   );
