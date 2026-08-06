@@ -28,8 +28,12 @@ export function PageHero({
   lead?: string;
 }) {
   return (
-    <section className="relative isolate overflow-hidden bg-ink py-16 sm:py-20">
-      <div aria-hidden className="absolute inset-0" style={{ background: "var(--gradient-hero)" }} />
+    <section className="relative isolate overflow-hidden bg-[#3B2416] py-16 sm:py-20">
+      <div
+        aria-hidden
+        className="absolute inset-0"
+        style={{ background: "linear-gradient(135deg, #3B2416 0%, #5C3A22 45%, #C9A24B 100%)" }}
+      />
       <div className="relative mx-auto max-w-7xl px-4">
         <span className="font-display text-xs font-semibold uppercase tracking-[0.3em] text-gold">
           {eyebrow}

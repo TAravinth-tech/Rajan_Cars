@@ -1,3 +1,5 @@
+
+
 import { useState } from "react";
 import { z } from "zod";
 import { CheckCircle2, ClipboardList, IndianRupee, KeySquare } from "lucide-react";
@@ -45,37 +47,39 @@ export function SellYourCar() {
   };
 
   const field =
-    "h-11 w-full rounded-md border border-gold/40 bg-ink-foreground/5 px-3 text-sm text-ink-foreground placeholder:text-ink-foreground/50 focus:border-gold focus:outline-hidden focus:ring-2 focus:ring-gold/40";
+    "h-11 w-full rounded-md border border-[#D4AF37]/40 bg-[#4A2E1C]/40 px-3 text-sm text-[#F5E9D3] placeholder:text-[#F5E9D3]/50 focus:border-[#D4AF37] focus:outline-hidden focus:ring-2 focus:ring-[#D4AF37]/40";
 
   return (
-    <section id="sell" className="relative overflow-hidden bg-ink py-20 sm:py-24">
+    <section id="sell" className="relative overflow-hidden bg-[#3B2416] py-20 sm:py-24">
       <div
         aria-hidden
         className="absolute inset-0 opacity-25"
-        style={{ background: "var(--gradient-red)" }}
+        style={{ background: "linear-gradient(135deg, #3B2416 0%, #5A3A22 50%, #D4AF37 150%)" }}
       />
       <div className="relative mx-auto flex max-w-7xl flex-col items-center gap-12 px-4">
         <SectionHeading
           tone="light"
           eyebrow="Sell Your Car"
-          title={<span className="text-ink-foreground">Sell Your Car in Three Simple Steps</span>}
+          title={<span className="text-[#F5E9D3]">Sell Your Car in Three Simple Steps</span>}
           lead="No haggling, no waiting weeks for a buyer. Bring your car in and drive out settled."
         />
 
         <div className="grid w-full gap-6 lg:grid-cols-3">
           {steps.map(({ icon: Icon, title, body }, index) => (
             <Reveal key={title} delay={index * 120}>
-              <div className="hover-lift flex h-full flex-col gap-3 rounded-lg border border-gold/40 bg-ink-soft p-7">
+              <div
+                className="group flex h-full flex-col gap-3 rounded-lg border border-[#D4AF37]/40 bg-[#4A2E1C] p-7 transform-gpu transition-all duration-300 ease-out will-change-transform hover:-translate-y-1 hover:border-[#D4AF37]/70 hover:shadow-lg hover:shadow-black/30"
+              >
                 <div className="flex items-center gap-3">
-                  <span className="grid size-11 place-items-center rounded-full bg-gold font-display text-lg font-bold text-gold-foreground">
+                  <span className="grid size-11 place-items-center rounded-full bg-[#D4AF37] font-display text-lg font-bold text-[#3B2416]">
                     {index + 1}
                   </span>
-                  <Icon className="size-6 text-gold" aria-hidden />
+                  <Icon className="size-6 text-[#D4AF37]" aria-hidden />
                 </div>
-                <h3 className="text-lg font-bold uppercase tracking-wide text-ink-foreground">
+                <h3 className="text-lg font-bold uppercase tracking-wide text-[#F5E9D3]">
                   {title}
                 </h3>
-                <p className="text-sm leading-relaxed text-ink-foreground/70">{body}</p>
+                <p className="text-sm leading-relaxed text-[#F5E9D3]/70">{body}</p>
               </div>
             </Reveal>
           ))}
@@ -83,26 +87,31 @@ export function SellYourCar() {
 
         {!showForm ? (
           <Reveal delay={200}>
-            <BrandButton variant="gold" size="lg" onClick={() => setShowForm(true)}>
-              Get a Free Valuation
+            <BrandButton
+              variant="gold"
+              size="lg"
+              asChild
+              className="bg-[#D4AF37] text-[#3B2416] hover:bg-[#E5C158]"
+            >
+              <a href="/contact/">Book a Consultation</a>
             </BrandButton>
           </Reveal>
         ) : (
           <Reveal className="w-full max-w-2xl">
-            <div className="rounded-lg border border-gold/50 bg-ink-soft p-6 sm:p-8">
+            <div className="rounded-lg border border-[#D4AF37]/50 bg-[#4A2E1C] p-6 sm:p-8">
               {submitted ? (
                 <div className="flex flex-col items-center gap-3 py-6 text-center">
-                  <CheckCircle2 className="size-10 text-gold" aria-hidden />
-                  <h3 className="text-xl font-bold uppercase text-ink-foreground">
+                  <CheckCircle2 className="size-10 text-[#D4AF37]" aria-hidden />
+                  <h3 className="text-xl font-bold uppercase text-[#F5E9D3]">
                     Valuation Request Received
                   </h3>
-                  <p className="text-sm text-ink-foreground/75">
+                  <p className="text-sm text-[#F5E9D3]/75">
                     Thank you — our team will call you on the number provided within one working day.
                   </p>
                 </div>
               ) : (
                 <form onSubmit={handleSubmit} noValidate className="grid gap-4 sm:grid-cols-2">
-                  <h3 className="sm:col-span-2 font-display text-lg font-bold uppercase tracking-wide text-gold">
+                  <h3 className="sm:col-span-2 font-display text-lg font-bold uppercase tracking-wide text-[#D4AF37]">
                     Free Car Valuation
                   </h3>
                   {[
@@ -120,13 +129,13 @@ export function SellYourCar() {
                         className={field}
                       />
                       {errors[input.name] ? (
-                        <span className="text-xs text-gold-soft">{errors[input.name]}</span>
+                        <span className="text-xs text-[#E5C158]">{errors[input.name]}</span>
                       ) : null}
                     </div>
                   ))}
                   <div className="flex flex-col gap-1 sm:col-span-2">
                     <select name="condition" defaultValue="" className={field}>
-                      <option value="" disabled>
+                      <option value="" disabled className="bg-[#3B2416] text-[#F5E9D3]">
                         Car Condition
                       </option>
                       <option value="Excellent">Excellent</option>
@@ -135,10 +144,15 @@ export function SellYourCar() {
                       <option value="Needs Work">Needs Work</option>
                     </select>
                     {errors['condition'] ? (
-                      <span className="text-xs text-gold-soft">{errors['condition']}</span>
+                      <span className="text-xs text-[#E5C158]">{errors['condition']}</span>
                     ) : null}
                   </div>
-                  <BrandButton type="submit" variant="gold" size="md" className="sm:col-span-2">
+                  <BrandButton
+                    type="submit"
+                    variant="gold"
+                    size="md"
+                    className="sm:col-span-2 bg-[#D4AF37] text-[#3B2416] hover:bg-[#E5C158]"
+                  >
                     Request My Valuation
                   </BrandButton>
                 </form>

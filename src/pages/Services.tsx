@@ -16,7 +16,7 @@ function ServicesPage() {
       <Services />
       <FeaturedCars />
       <SellYourCar />
-      <Finance />
+      
       <CheckeredDivider />
       <WhyChooseUs />
     </SiteLayout>

@@ -3,7 +3,7 @@ import carSedan from "@/assets/car-sedan.jpg";
 import carSuv from "@/assets/car-suv.jpg";
 import carMuv from "@/assets/car-muv.jpg";
 import showroomHero from "@/assets/hero-showroom.png";
-import showroomAbout from "@/assets/about-showroom.jpg";
+import showroomAbout from "@/assets/about-showroom.png";
 import galleryFloor from "@/assets/gallery-floor.jpg";
 import galleryHandover from "@/assets/gallery-handover.jpg";
 

@@ -68,10 +68,10 @@ export function Hero() {
           <Reveal delay={300}>
             <div className="mt-8 flex flex-wrap gap-3">
               <BrandButton asChild variant="gold" size="lg">
-                <Link to="/services" hash="cars">Browse Cars</Link>
+                <Link to="/services/" hash="cars">Browse Cars</Link>
               </BrandButton>
               <BrandButton asChild variant="ghostLight" size="lg">
-                <Link to="/services" hash="sell">Sell Your Car</Link>
+                <Link to="/services/" hash="sell">Sell Your Car</Link>
               </BrandButton>
             </div>
           </Reveal>

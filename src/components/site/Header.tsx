@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { Mail, MapPin, Menu, Phone, X } from "lucide-react";
 import { Link } from "./Link";
 import { cn } from "@/lib/utils";
@@ -8,23 +8,23 @@ import { BrandButton, LogoEmblem } from "./Brand";
 /** Black top bar: location + click-to-call + email. */
 function TopBar() {
   return (
-    <div className="bg-ink text-gold">
-      <div className="mx-auto flex max-w-7xl flex-col items-center gap-1 px-4 py-2 text-xs sm:flex-row sm:justify-between">
+    <div className="bg-[#3B2416] text-gold">
+      <div className="mx-auto flex max-w-7xl flex-col items-center gap-1.5 px-4 py-2 text-xs sm:flex-row sm:justify-between">
         <p className="flex items-center gap-1.5">
-          <MapPin className="size-3.5" aria-hidden />
+          <MapPin className="size-3.5 shrink-0" aria-hidden />
           <span className="tracking-wide">{business.city}</span>
         </p>
         <div className="flex items-center gap-4">
           <a href={`tel:${business.phone}`} className="flex items-center gap-1.5 hover:text-gold-soft">
-            <Phone className="size-3.5" aria-hidden />
+            <Phone className="size-3.5 shrink-0" aria-hidden />
             {business.phone}
           </a>
           <a
             href={`mailto:${business.email}`}
-            className="flex items-center gap-1.5 hover:text-gold-soft"
+            className="hidden items-center gap-1.5 hover:text-gold-soft sm:flex"
           >
-            <Mail className="size-3.5" aria-hidden />
-            <span className="hidden sm:inline">{business.email}</span>
+            <Mail className="size-3.5 shrink-0" aria-hidden />
+            <span>{business.email}</span>
           </a>
         </div>
       </div>
@@ -32,13 +32,41 @@ function TopBar() {
   );
 }
 
+
 /** Sticky white navbar that shrinks on scroll. */
 export function Header() {
   const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
+  const scrolledRef = useRef(false);
+  const tickingRef = useRef(false);
 
   useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 40);
+    // Hysteresis: different thresholds for entering vs. leaving the
+    // "scrolled" state so the header doesn't flicker back and forth
+    // when the scroll position hovers near a single cutoff.
+    const DOWN_THRESHOLD = 60;
+    const UP_THRESHOLD = 20;
+
+    const evaluate = () => {
+      tickingRef.current = false;
+      const y = window.scrollY;
+
+      if (!scrolledRef.current && y > DOWN_THRESHOLD) {
+        scrolledRef.current = true;
+        setScrolled(true);
+      } else if (scrolledRef.current && y < UP_THRESHOLD) {
+        scrolledRef.current = false;
+        setScrolled(false);
+      }
+    };
+
+    const onScroll = () => {
+      if (!tickingRef.current) {
+        tickingRef.current = true;
+        requestAnimationFrame(evaluate);
+      }
+    };
+
     onScroll();
     window.addEventListener("scroll", onScroll, { passive: true });
     return () => window.removeEventListener("scroll", onScroll);
@@ -46,11 +74,21 @@ export function Header() {
 
   return (
     <header className="sticky top-0 z-50 w-full">
-      <div className={cn("overflow-hidden transition-all duration-300", scrolled ? "h-0" : "h-auto")}>
-        <TopBar />  
+      {/*
+        grid-template-rows animates smoothly between 0fr and 1fr, unlike
+        height: auto <-> 0, which snaps instantly and causes the "shake"
+        because everything below it jumps in one frame instead of easing.
+      */}
+      <div
+        className="grid overflow-hidden transition-[grid-template-rows] duration-300 ease-in-out"
+        style={{ gridTemplateRows: scrolled ? "0fr" : "1fr" }}
+      >
+        <div className="min-h-0">
+          <TopBar />
+        </div>
       </div>
 
-      <div  
+      <div
         className={cn(
           "border-b-2 border-gold bg-background transition-all duration-300",
           scrolled ? "shadow-[var(--shadow-card)]" : "",
@@ -82,7 +120,7 @@ export function Header() {
 
           <div className="flex items-center gap-2">
             <BrandButton asChild variant="red" size="sm" className="hidden sm:inline-flex">
-              <Link to="/contact">Book a Test Drive</Link>
+              <Link to="/contact/">Book a Test Drive</Link>
             </BrandButton>
             <button
               type="button"
@@ -115,7 +153,7 @@ export function Header() {
               ))}
             </ul>
             <BrandButton asChild variant="red" size="md" className="mt-4 w-full">
-              <Link to="/contact" onClick={() => setOpen(false)}>
+              <Link to="/contact/" onClick={() => setOpen(false)}>
                 Book a Test Drive
               </Link>
             </BrandButton>

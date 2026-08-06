@@ -1,5 +1,5 @@
 import { BadgeCheck, FileCheck2, IndianRupee, Users } from "lucide-react";
-import aboutImage from "@/assets/about-showroom.jpg";
+import aboutImage from "@/assets/about-showroom.png";
 import { Reveal } from "@/lib/reveal";
 import { SectionHeading, SinceTag } from "./Brand";
 

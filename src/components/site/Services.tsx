@@ -18,19 +18,19 @@ const services = [
     icon: CarFront,
     title: "Used Car Sales",
     body: "A wide range of quality pre-owned cars from trusted brands, each carefully inspected for performance and reliability. Multiple models and price ranges to fit every budget and lifestyle.",
-    href: "/services#cars",
+    href: "/contact/",
   },
   {
     icon: HandCoins,
     title: "Used Car Buying",
     body: "Sell your car quickly and easily. We give a fair evaluation based on real condition and current market value, with a simple, transparent process from start to finish.",
-    href: "/services#sell",
+    href: "/contact/",
   },
   {
     icon: Landmark,
     title: "Car Finance Assistance",
     body: "Car loan and EMI support through trusted finance partners. Our staff assist with loan options, documentation and approvals so your purchase stays stress-free.",
-    href: "/services#finance",
+    href: "/contact/",
   },
 ];
 
@@ -66,7 +66,7 @@ export function Services() {
                   href={href}
                   className="inline-flex items-center gap-1.5 font-display text-sm font-semibold uppercase tracking-wider text-primary transition-colors group-hover:text-gold"
                 >
-                  Learn More <ArrowRight className="size-4" aria-hidden />
+                  Book a Visit <ArrowRight className="size-4" aria-hidden />
                 </a>
               </article>
             </Reveal>

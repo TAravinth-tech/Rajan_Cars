@@ -151,7 +151,7 @@ export function Finance() {
                 </p>
 
                 <BrandButton asChild variant="red" size="md">
-                  <Link to="/contact">Check Your Eligibility</Link>
+                  <Link to="/contact/">Check Your Eligibility</Link>
                 </BrandButton>
               </div>
             </div>

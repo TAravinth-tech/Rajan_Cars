@@ -1,3 +1,6 @@
+
+
+
 import { useState } from "react";
 import { z } from "zod";
 import { CheckCircle2, Clock, Mail, MapPin, Phone } from "lucide-react";
@@ -38,12 +41,12 @@ export function Contact() {
     "h-11 w-full rounded-md border border-input bg-background px-3 text-sm focus:border-gold focus:outline-hidden focus:ring-2 focus:ring-gold/40";
 
   return (
-    <section id="contact" className="bg-ink py-20 sm:py-24">
+    <section id="contact" className="bg-[#F8F4EC] py-20 sm:py-24">
       <div className="mx-auto flex max-w-7xl flex-col items-center gap-12 px-4">
         <SectionHeading
-          tone="light"
+          tone="dark"
           eyebrow="Contact"
-          title={<span className="text-ink-foreground">Visit Our Showroom</span>}
+          title={<span className="text-ink">Visit Our Showroom</span>}
           lead="Walk in for a test drive, or send us a message and we'll get back to you the same day."
         />
 
@@ -103,7 +106,7 @@ export function Contact() {
                       Showroom Hours
                     </h3>
                     <p className="mt-1 text-sm text-muted-foreground">
-                      Monday – Saturday, 9:30 AM – 8:00 PM · Sunday by appointment
+                      Monday – Sunday, 9:00 AM – 9:00 PM 
                     </p>
                   </div>
                 </li>

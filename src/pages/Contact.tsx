@@ -11,7 +11,6 @@ function ContactPage() {
         lead="Drop in for a test drive, call us for today's stock, or send an enquiry and our team will get back to you the same day."
       />
       <Contact />
-      <Gallery />
     </SiteLayout>
   );
 }

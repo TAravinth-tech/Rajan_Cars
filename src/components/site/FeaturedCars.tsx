@@ -144,10 +144,10 @@ export function FeaturedCars() {
                   </ul>
                   <div className="mt-auto flex flex-col gap-2 pt-2">
                     <BrandButton asChild variant="dark" size="sm">
-                      <Link to="/contact">View Details</Link>
+                      <Link to="/contact/">View Details</Link>
                     </BrandButton>
                     <BrandButton asChild variant="outline" size="sm">
-                      <Link to="/contact">Enquire Now</Link>
+                      <Link to="/contact/">Enquire Now</Link>
                     </BrandButton>
                   </div>
                 </div>

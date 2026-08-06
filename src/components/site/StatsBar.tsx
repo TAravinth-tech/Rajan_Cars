@@ -5,7 +5,7 @@ type Stat = { value: number; suffix: string; label: string };
 
 const stats: Stat[] = [
   { value: 70, suffix: "+", label: "Years in Business" },
-  { value: 7000, suffix: "+", label: "Cars Sold" },
+  { value: 100000, suffix: "+", label: "Cars Sold" },
   { value: 0, suffix: "Easy EMI", label: "Finance Options" },
   { value: 0, suffix: "Trusted", label: "by Trichy Families" },
 ];
@@ -55,7 +55,7 @@ export function StatsBar() {
         className="mx-auto grid max-w-7xl grid-cols-2 gap-8 px-4 py-12 text-center lg:grid-cols-4"
       >
         {stats.map((stat) => (
-          <div key={stat.label} className="flex flex-col items-center gap-1">
+          <div key={stat.label} className="flex flex-col items-center gap-5">
             <Counter target={stat.value} suffix={stat.suffix} run={inView} />
             <span className="text-xs font-medium uppercase tracking-[0.16em] text-[#5C4A2D] sm:text-sm">
               {stat.label}

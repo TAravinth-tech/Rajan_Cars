@@ -1,14 +1,16 @@
-import { Facebook, Instagram, Mail, MapPin, Phone, Youtube } from "lucide-react";
+
+
+import { Clock, Facebook, Instagram, Mail, MapPin, Phone, Youtube } from "lucide-react";
 import { business, navLinks } from "@/data/site";
 import { Link } from "./Link";
 import { LogoEmblem } from "./Brand";
 
 const services = [
-  { label: "Used Car Sales", href: "/services" },
-  { label: "Used Car Buying", href: "/services" },
-  { label: "Car Finance Assistance", href: "/services" },
-  { label: "Exchange & Upgrade", href: "/services" },
-  { label: "Test Drives", href: "/contact" },
+  { label: "Used Car Sales", href: "/services/" },
+  { label: "Used Car Buying", href: "/services/" },
+  { label: "Car Finance Assistance", href: "/services/" },
+  { label: "Exchange & Upgrade", href: "/services/" },
+  { label: "Test Drives", href: "/contact/" },
 ];
 
 const socials = [
@@ -95,6 +97,13 @@ export function Footer() {
               <a href={`mailto:${business.email}`} className="hover:text-gold">
                 {business.email}
               </a>
+            </li>
+            <li className="flex gap-2">
+              <Clock className="mt-0.5 size-4 shrink-0 text-gold" aria-hidden />
+              <span>
+                <span className="block text-ink-foreground/90">Mon – Sun</span>
+                <span className="block">9:00 AM – 9:00 PM</span>
+              </span>
             </li>
           </ul>
         </div>
