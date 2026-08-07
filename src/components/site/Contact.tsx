@@ -1,6 +1,3 @@
-
-
-
 import { useState } from "react";
 import { z } from "zod";
 import { CheckCircle2, Clock, Mail, MapPin, Phone } from "lucide-react";
@@ -19,6 +16,9 @@ const contactSchema = z.object({
   message: z.string().trim().min(5, "Tell us a little more").max(1000),
 });
 
+// WhatsApp number the enquiry should be sent to (country code + number, digits only)
+const WHATSAPP_NUMBER = "919842458666";
+
 export function Contact() {
   const [errors, setErrors] = useState<Record<string, string>>({});
   const [sent, setSent] = useState(false);
@@ -34,6 +34,22 @@ export function Contact() {
       return;
     }
     setErrors({});
+
+    const message = [
+      "*New Enquiry — Rajan Cars*",
+      "",
+      `*Name:* ${data.name}`,
+      `*Phone:* ${data.phone}`,
+      `*Email:* ${data.email}`,
+      `*Interested In:* ${data.interest}`,
+      "",
+      "*Message:*",
+      data.message,
+    ].join("\n");
+
+    const whatsappUrl = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`;
+    window.open(whatsappUrl, "_blank", "noopener,noreferrer");
+
     setSent(true);
   };
 
@@ -130,10 +146,17 @@ export function Contact() {
               {sent ? (
                 <div className="flex flex-col items-center gap-3 py-10 text-center">
                   <CheckCircle2 className="size-12 text-primary" aria-hidden />
-                  <h3 className="text-xl font-bold uppercase">Message Sent</h3>
+                  <h3 className="text-xl font-bold uppercase">Your Enquiry Has Been Submitted</h3>
                   <p className="text-sm text-muted-foreground">
-                    Thank you for reaching out to Rajan Cars. Our team will contact you shortly.
+                    Thank you for reaching out to Rajan Cars.We will get back to you as soon as possible.
                   </p>
+                  <button
+                    type="button"
+                    onClick={() => setSent(false)}
+                    className="mt-2 text-xs font-semibold uppercase tracking-wide text-primary underline underline-offset-4"
+                  >
+                    Send another enquiry
+                  </button>
                 </div>
               ) : (
                 <form onSubmit={handleSubmit} noValidate className="grid gap-4">

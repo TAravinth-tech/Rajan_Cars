@@ -14,11 +14,12 @@ function ServicesPage() {
         lead="From choosing the right pre-owned car to loan approval and RC transfer, our team handles every step of the process for you."
       />
       <Services />
-      <FeaturedCars />
       <SellYourCar />
+      <FeaturedCars />
+      
       
       <CheckeredDivider />
-      <WhyChooseUs />
+      
     </SiteLayout>
   );
 }

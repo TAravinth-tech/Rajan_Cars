@@ -148,32 +148,28 @@ export const cars: Car[] = [
 
 export const testimonials = [
   {
-    name: "Suresh Kumar",
-    car: "Hyundai Creta SX (2020)",
+    name: "Pavithra MuthuSelvam",
     rating: 5,
     quote:
-      "My family has bought cars from Rajan Cars for two generations. Honest pricing, no hidden surprises, and the car was exactly as described.",
+      "Had a pleasant and professional experience with Rajan Cars. The car was in excellent condition, pricing was fair, and the documentation process was smooth. Highly recommended for quality second-hand cars.",
   },
   {
-    name: "Lakshmi Narayanan",
-    car: "Maruti Suzuki Swift VDi (2019)",
+    name: "Raji Sivan",
     rating: 5,
     quote:
-      "They arranged the loan, handled all the RC transfer paperwork and delivered within a week. Very smooth experience for a first-time buyer.",
+      "Rajan cars in Tiruchirappalli is a well rated used car dealer. The car condition was excellent and well maintained, exactly as promised. Pricing was reasonable and transparent. Highly recommend for anyone looking to buy a quality used car with peace of mind.",
   },
   {
-    name: "Mohammed Faizal",
-    car: "Toyota Innova Crysta (2019)",
+    name: "Vasan Ak",
     rating: 5,
     quote:
-      "Sold my old car here and bought an Innova the same day. The valuation was fair and the exchange was settled without any bargaining drama.",
+      "Bought Alto 800 car 3 months before.100% quality car. Till now no problems faced.Best place to buy quality cars.",
   },
   {
-    name: "Priya Devi",
-    car: "Hyundai i20 Asta (2020)",
+    name: "Murugan Natarajan",
     rating: 5,
     quote:
-      "The team let me test drive three cars patiently and explained the service history of each one. Genuine people, genuinely trustworthy.",
+      "Genuine dealer in Trichy city. 100% assured quality used cars. Check for your self. I bought alto Car the quality of the car is excellent, low mileage vehicle with Reasonable price.",
   },
 ];
 
