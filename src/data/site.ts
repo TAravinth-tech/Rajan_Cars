@@ -1,7 +1,18 @@
 import carHatchback from "@/assets/car-hatchback.jpg";
-import carSedan from "@/assets/car-sedan.jpg";
-import carSuv from "@/assets/car-suv.jpg";
-import carMuv from "@/assets/car-muv.jpg";
+import car1 from "@/assets/car_1.png";
+import car2 from "@/assets/car_2.png";
+import car3 from "@/assets/car_3.png";
+import car4 from "@/assets/car_4.png";
+import car5 from "@/assets/car_5.png";
+import car6 from "@/assets/car_6.png";
+import car7 from "@/assets/car_7.png";
+import car8 from "@/assets/car_8.png";
+import car9 from "@/assets/car_9.png";
+import car10 from "@/assets/car_10.png";
+import car11 from "@/assets/car_11.png";
+import car12 from "@/assets/car_12.png";
+import car13 from "@/assets/car_13.png";
+import car14 from "@/assets/car_14.png";
 import showroomHero from "@/assets/hero-showroom.png";
 import showroomAbout from "@/assets/about-showroom.png";
 import galleryFloor from "@/assets/gallery-floor.jpg";
@@ -49,8 +60,8 @@ export type Car = {
 /** Placeholder inventory — replace image URLs with real showroom photos. */
 export const cars: Car[] = [
   {
-    id: "swift-vdi",
-    name: "Maruti Suzuki Swift VDi",
+    id: "hyundai-venue",
+    name: "Huyundai venue S Diesel",
     year: 2019,
     price: 525000,
     brand: "Maruti Suzuki",
@@ -58,11 +69,11 @@ export const cars: Car[] = [
     km: 48000,
     transmission: "Manual",
     body: "Hatchback",
-    image: carHatchback,
+    image: car4,
   },
   {
-    id: "hyundai-creta",
-    name: "Hyundai Creta SX",
+    id: "Renault kwid",
+    name: "Renault kwid",
     year: 2020,
     price: 1150000,
     brand: "Hyundai",
@@ -70,23 +81,23 @@ export const cars: Car[] = [
     km: 36500,
     transmission: "Automatic",
     body: "SUV",
-    image: carSuv,
+    image: car2,
   },
   {
-    id: "honda-city",
-    name: "Honda City VX",
+    id: "Maruti Swift",
+    name: "Maruti Swift",
     year: 2018,
     price: 690000,
-    brand: "Honda",
+    brand: "Maruti Suzuki",
     fuel: "Petrol",
     km: 61200,
     transmission: "Manual",
     body: "Sedan",
-    image: carSedan,
+    image: car1,
   },
   {
-    id: "toyota-innova",
-    name: "Toyota Innova Crysta",
+    id: "Thar jeep",
+    name: "Thar jeep",
     year: 2019,
     price: 1450000,
     brand: "Toyota",
@@ -94,55 +105,128 @@ export const cars: Car[] = [
     km: 74000,
     transmission: "Manual",
     body: "MUV",
-    image: carMuv,
+    image: car3,
   },
   {
-    id: "tata-nexon",
-    name: "Tata Nexon XZ+",
-    year: 2021,
-    price: 880000,
-    brand: "Tata",
-    fuel: "Petrol",
-    km: 27400,
-    transmission: "Manual",
-    body: "SUV",
-    image: carSuv,
-  },
-  {
-    id: "hyundai-i20",
-    name: "Hyundai i20 Asta",
-    year: 2020,
-    price: 645000,
-    brand: "Hyundai",
-    fuel: "Petrol",
-    km: 33100,
-    transmission: "Automatic",
-    body: "Hatchback",
-    image: carHatchback,
-  },
-  {
-    id: "maruti-dzire",
-    name: "Maruti Suzuki Dzire ZXi",
-    year: 2017,
-    price: 465000,
-    brand: "Maruti Suzuki",
-    fuel: "CNG",
-    km: 82500,
-    transmission: "Manual",
-    body: "Sedan",
-    image: carSedan,
-  },
-  {
-    id: "mahindra-xuv300",
-    name: "Mahindra XUV300 W8",
-    year: 2021,
-    price: 935000,
-    brand: "Mahindra",
+    id: "Thar jeep",
+    name: "Thar jeep",
+    year: 2019,
+    price: 1450000,
+    brand: "Toyota",
     fuel: "Diesel",
-    km: 41800,
+    km: 74000,
     transmission: "Manual",
-    body: "SUV",
-    image: carSuv,
+    body: "MUV",
+    image: car5,
+  },
+   {
+    id: "Toyota Fortuner",
+    name: "Toyota Fortuner",
+    year: 2019,
+    price: 1450000,
+    brand: "Toyota",
+    fuel: "Diesel",
+    km: 74000,
+    transmission: "Manual",
+    body: "MUV",
+    image: car6,
+  },
+   {
+    id: "Tata nexon",
+    name: "Tata nexon",
+    year: 2019,
+    price: 1450000,
+    brand: "Tata",
+    fuel: "Diesel",
+    km: 74000,
+    transmission: "Manual",
+    body: "MUV",
+    image: car7,
+  },
+   {
+    id: "Tata tigor",
+    name: "Tata tigor",
+    year: 2019,
+    price: 1450000,
+    brand: "Tata",
+    fuel: "Diesel",
+    km: 74000,
+    transmission: "Manual",
+    body: "MUV",
+    image: car8,
+  },
+  {
+    id: "Honda Amaze",
+    name: "Honda Amaze",
+    year: 2019,
+    price: 1450000,
+    brand: "Tata",
+    fuel: "Diesel",
+    km: 74000,
+    transmission: "Manual",
+    body: "MUV",
+    image: car9,
+  },
+
+   {
+    id: "Maruti Swift Dzire",
+    name: "Maruti Swift Dzire",
+    year: 2019,
+    price: 1450000,
+    brand: "Tata",
+    fuel: "Diesel",
+    km: 74000,
+    transmission: "Manual",
+    body: "MUV",
+    image: car10,
+  },
+  {
+    id: "Toyota Innova crysta",
+    name: "Toyota Innova crysta",
+    year: 2019,
+    price: 1450000,
+    brand: "Tata",
+    fuel: "Diesel",
+    km: 74000,
+    transmission: "Manual",
+    body: "MUV",
+    image: car11,
+  },
+  {
+    id: "Volkswagen Vento",
+    name: "Volkswagen Vento",
+    year: 2019,
+    price: 1450000,
+    brand: "Tata",
+    fuel: "Diesel",
+    km: 74000,
+    transmission: "Manual",
+    body: "MUV",
+    image: car12,
+  },
+  {
+    id: "Toyota Hycross",
+    name: "Toyota Hycross",
+    year: 2019,
+    price: 1450000,
+    brand: "Tata",
+    fuel: "Diesel",
+    km: 74000,
+    transmission: "Manual",
+    body: "MUV",
+    image: car13,
+  },
+    {
+    id: "Hyundai i20",
+    name: "Hyundai i20",
+    year: 2019,
+    price: 1450000,
+    brand: "Tata",
+    fuel: "Diesel",
+    km: 74000,
+    transmission: "Manual",
+    body: "MUV",
+    image: car14,
   },
 ];
 
@@ -174,16 +258,6 @@ export const testimonials = [
 ];
 
 /** Gallery placeholders — swap with real showroom photography. */
-export const gallery = [
-  showroomHero,
-  galleryFloor,
-  showroomAbout,
-  galleryHandover,
-  carSuv,
-  carSedan,
-  carHatchback,
-  carMuv,
-];
 
 export const formatPrice = (value: number) =>
   `₹${value.toLocaleString("en-IN", { maximumFractionDigits: 0 })}`;

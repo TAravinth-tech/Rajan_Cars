@@ -16,7 +16,7 @@ function Index() {
       <CheckeredDivider />
       <FeaturedCars />
       <Testimonials />
-      <Gallery />
+      
     </SiteLayout>
   );
 }
