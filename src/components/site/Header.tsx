@@ -8,22 +8,29 @@ import { BrandButton, LogoEmblem } from "./Brand";
 /** Black top bar: location + click-to-call + email. */
 function TopBar() {
   return (
-    <div className="bg-[#3B2416] text-gold">
-      <div className="mx-auto flex max-w-7xl flex-col items-center gap-1.5 px-4 py-2 text-xs sm:flex-row sm:justify-between">
-        <p className="flex items-center gap-1.5">
-          <MapPin className="size-3.5 shrink-0" aria-hidden />
-          <span className="tracking-wide">{business.city}</span>
+    <div className="bg-[#3B2416] text-gold/90">
+      <div className="mx-auto flex max-w-7xl items-center justify-between gap-3 px-4 py-2 text-xs">
+        <p className="flex min-w-0 items-center gap-1.5 truncate">
+          <MapPin className="size-3.5 shrink-0 text-gold" aria-hidden />
+          <span className="truncate tracking-wide">{business.city}</span>
         </p>
-        <div className="flex items-center gap-4">
-          <a href={`tel:${business.phone}`} className="flex items-center gap-1.5 hover:text-gold-soft">
-            <Phone className="size-3.5 shrink-0" aria-hidden />
-            {business.phone}
+
+        <div className="flex items-center gap-3 sm:gap-5">
+          <a
+            href={`tel:${business.phone}`}
+            className="flex items-center gap-1.5 whitespace-nowrap transition-colors duration-200 hover:text-gold-soft"
+          >
+            <Phone className="size-3.5 shrink-0 text-gold" aria-hidden />
+            <span>{business.phone}</span>
           </a>
+
+          <span className="hidden h-3.5 w-px bg-gold/25 sm:block" aria-hidden />
+
           <a
             href={`mailto:${business.email}`}
-            className="hidden items-center gap-1.5 hover:text-gold-soft sm:flex"
+            className="hidden items-center gap-1.5 whitespace-nowrap transition-colors duration-200 hover:text-gold-soft sm:flex"
           >
-            <Mail className="size-3.5 shrink-0" aria-hidden />
+            <Mail className="size-3.5 shrink-0 text-gold" aria-hidden />
             <span>{business.email}</span>
           </a>
         </div>

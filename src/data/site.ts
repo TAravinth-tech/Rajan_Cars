@@ -13,6 +13,12 @@ import car11 from "@/assets/car_11.png";
 import car12 from "@/assets/car_12.png";
 import car13 from "@/assets/car_13.png";
 import car14 from "@/assets/car_14.png";
+import car15 from "@/assets/car_15.png";
+import car16 from "@/assets/car_16.png";
+import car17 from "@/assets/car_17.png";
+import car18 from "@/assets/car_18.png";
+import car19 from "@/assets/car_19.png";
+import car20 from "@/assets/car_20.png";
 import showroomHero from "@/assets/hero-showroom.png";
 import showroomAbout from "@/assets/about-showroom.png";
 import galleryFloor from "@/assets/gallery-floor.jpg";
@@ -227,6 +233,78 @@ export const cars: Car[] = [
     transmission: "Manual",
     body: "MUV",
     image: car14,
+  },
+  {
+    id: "Toyota Innova Crysta",
+    name: "Toyota Innova Crysta",
+    year: 2019,
+    price: 1450000,
+    brand: "Tata",
+    fuel: "Diesel",
+    km: 74000,
+    transmission: "Manual",
+    body: "MUV",
+    image: car15,
+  },
+  {
+    id: "Toyota Qualis",
+    name: "Toyota Qualis",
+    year: 2019,
+    price: 1450000,
+    brand: "Tata",
+    fuel: "Diesel",
+    km: 74000,
+    transmission: "Manual",
+    body: "MUV",
+    image: car16,
+  },
+  {
+    id: "Toyota Glanza",
+    name: "Toyota Glanza",
+    year: 2019,
+    price: 1450000,
+    brand: "Tata",
+    fuel: "Diesel",
+    km: 74000,
+    transmission: "Manual",
+    body: "MUV",
+    image: car17,
+  },
+  {
+    id: "Nissan Micra",
+    name: "Nissan Micra",
+    year: 2019,
+    price: 1450000,
+    brand: "Tata",
+    fuel: "Diesel",
+    km: 74000,
+    transmission: "Manual",
+    body: "MUV",
+    image: car18,
+  },
+  {
+    id: "Maruti Suzuki SX4",
+    name: "Maruti Suzuki SX4",
+    year: 2019,
+    price: 1450000,
+    brand: "Tata",
+    fuel: "Diesel",
+    km: 74000,
+    transmission: "Manual",
+    body: "MUV",
+    image: car19,
+  },
+  {
+    id: "Maruti Suzuki Ertiga",
+    name: "Maruti Suzuki Ertiga",
+    year: 2019,
+    price: 1450000,
+    brand: "Tata",
+    fuel: "Diesel",
+    km: 74000,
+    transmission: "Manual",
+    body: "MUV",
+    image: car20,
   },
 ];
 
