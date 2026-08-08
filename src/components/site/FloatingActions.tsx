@@ -25,7 +25,7 @@ export function FloatingActions() {
         <MessageCircle className="size-5" aria-hidden />
       </a>
       <a
-        href={`tel:${business.phone}`}
+        href={`tel:${business.phoneIntl}`}
         aria-label="Call Rajan Cars now"
         className="grid size-12 place-items-center rounded-full bg-primary text-primary-foreground shadow-[var(--shadow-lift)] transition-transform duration-300 hover:-translate-y-1"
       >
