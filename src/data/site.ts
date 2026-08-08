@@ -39,7 +39,7 @@ export const business = {
   address:
     "No.165, Madurai Main Rd, opp. Amma Hotel, Bharathi Nagar, Crawford Colony, Tiruchirappalli, Tamil Nadu, India - 620012",
   mapEmbed:
-    "https://www.google.com/maps?q=No.165,+Madurai+Main+Road,+Bharathi+Nagar,+Crawford+Colony,+Tiruchirappalli,+Tamil+Nadu+620012&output=embed",
+    "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d979.8388803540083!2d78.676619!3d10.784059!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3baaf54841ee33b3%3A0x1ea0949fefa29b00!2sRajan%20Cars%20since%201952%20Buy%2FSell%20used%20cars!5e0!3m2!1sen!2sus!4v1786178791332!5m2!1sen!2sus",
 };
 
 export const navLinks = [

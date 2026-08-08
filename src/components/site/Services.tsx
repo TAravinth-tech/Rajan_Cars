@@ -40,7 +40,7 @@ const reasons = [
   { icon: Banknote, label: "Easy EMI & Finance Options" },
   { icon: KeyRound, label: "Test Drive Before You Buy" },
   { icon: ClipboardCheck, label: "Complete Documentation Support" },
-  { icon: Gauge, label: "70+ Years of Trusted Service" },
+  { icon: Gauge, label: "74 Years of Trusted Service" },
 ];
 
 export function Services() {

@@ -88,7 +88,7 @@ export function Hero() {
   `,
 }}
 >
-  70+ Years of Trust · Transparent Deals · Easy Finance
+  74 Years of Trust · Transparent Deals · Easy Finance
 </p>
           </Reveal>
         </div>

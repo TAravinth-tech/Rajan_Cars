@@ -4,8 +4,8 @@ import { useInView } from "@/lib/reveal";
 type Stat = { value: number; suffix: string; label: string };
 
 const stats: Stat[] = [
-  { value: 70, suffix: "+", label: "Years in Business" },
-  { value: 100000, suffix: "+", label: "Cars Sold" },
+  { value: 74, suffix: "", label: "Years in Business" },
+  { value: 50000, suffix: "+", label: "Cars Sold" },
   { value: 0, suffix: "Easy EMI", label: "Finance Options" },
   { value: 0, suffix: "Trusted", label: "by Trichy Families" },
 ];
