@@ -130,13 +130,24 @@ export function Footer() {
         <div className="mx-auto flex max-w-7xl flex-col items-center gap-2 px-4 py-5 text-xs text-ink-foreground/60 sm:flex-row sm:justify-between">
           <p>© 2026 Rajan Cars. All Rights Reserved.</p>
           <div className="flex gap-4">
-            <Link to="/" className="hover:text-gold">
-              Privacy Policy
-            </Link>
-            <Link to="/" className="hover:text-gold">
-              Terms
-            </Link>
-          </div>
+  {/* Enquire Now → WhatsApp */}
+  <a
+    href="https://wa.me/919842458666?text=Hi%20Rajan%20Cars%2C%20I%20am%20interested%20in%20your%20used%20cars."
+    target="_blank"
+    rel="noopener noreferrer"
+    className="hover:text-gold"
+  >
+    Enquire Now
+  </a>
+
+  {/* Book a Test Drive → Contact Page */}
+  <Link
+    to="/contact/"
+    className="hover:text-gold"
+  >
+    Book a Test Drive
+  </Link>
+</div>
         </div>
       </div>
     </footer>

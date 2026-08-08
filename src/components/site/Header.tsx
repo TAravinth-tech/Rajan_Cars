@@ -91,7 +91,7 @@ export function Header() {
         style={{ gridTemplateRows: scrolled ? "0fr" : "1fr" }}
       >
         <div className="min-h-0">
-          <TopBar />
+          
         </div>
       </div>
 

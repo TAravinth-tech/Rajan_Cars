@@ -32,7 +32,7 @@ import galleryHandover from "@/assets/gallery-handover.jpg";
 export const business = {
   name: "Rajan Cars",
   since: "1952",
-  phone: "9842458666",
+  phone: "9842458666 , 9842458166",
   phoneIntl: "919842458666",
   email: "rajancar@gmail.com",
   city: "Tiruchirappalli, Tamil Nadu",
